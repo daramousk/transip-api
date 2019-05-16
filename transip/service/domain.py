@@ -155,8 +155,8 @@ class DomainService(Client):
     def add_dns_entries(self, domain_name, dns_entries):
         """
         Adds the given DnsEntries to the domain.
-        :type domain_name str
-        :type dns_entries a list of transip.service.objects.DnsEntry
+        :type domain_name: str
+        :type dns_entries: list of transip.service.objects.DnsEntry
         """
         old_dns_entries = self.get_info(domain_name).dnsEntries
         return self.set_dns_entries(domain_name, old_dns_entries + dns_entries)
